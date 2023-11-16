@@ -15,9 +15,16 @@ python cli.py menu
 ```
 python cli.py order pizza_name pizza_size [--delivery]
 ```
-где pizza_name - наименование пиццы (доступны Margherita, Pepperoni, Hawaiian), 
-pizza_size - размер пиццы (доступны L, XL)
+где pizza_name - наименование пиццы (доступны Margherita, Pepperoni, Hawaiian) (регистр не важен), 
+
+pizza_size - размер пиццы (доступны L, XL),
+
 --delivery - если хотите заказать доставку вместо самовывоза
+
+3) Тесты запустить можно командой
+```
+python -m pytest testing.py
+```
 
 # Результаты
 ```
@@ -25,8 +32,6 @@ PS C:\Users\User\aaa_final> python cli.py menu
 - Margherita 🧀: tomato sauce, mozzarella, tomatoes
 - Pepperoni 🍕: tomato sauce, mozzarella, pepperoni
 - Hawaiian 🍍: tomato sauce, mozzarella, chicken, pineapples
-Все пиццы доступны в размерах L, XL
-Чтобы сделать заказ, введите python cli.py order pizza_name pizza_size [--delivery]
 
 PS C:\Users\User\aaa_final> python cli.py order margherita l
 👨‍🍳 Приготовили за 6c!
@@ -44,4 +49,18 @@ PS C:\Users\User\aaa_final> python cli.py order HAWAIIAN  asd --delivery
 PS C:\Users\User\aaa_final> python cli.py order haWAiian xL
 👨‍🍳 Приготовили за 36c!
 🏠 Забрали за 1с!
+```
+
+
+```
+PS C:\Users\User\aaa_final> python -m pytest testing.py
+============================ test session starts =============================
+platform win32 -- Python 3.11.3, pytest-7.4.3, pluggy-1.3.0
+rootdir: C:\Users\User\aaa_final
+plugins: anyio-3.6.2, cov-4.1.0
+collected 6 items
+
+testing.py ......                                                       [100%] 
+
+============================= 6 passed in 0.09s ============================== 
 ```
