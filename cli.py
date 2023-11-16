@@ -67,9 +67,6 @@ def menu():
     for pizza in pizzas:
         recipe_str = ', '.join(pizza.recipe)
         print(f'- {pizza.name} {pizza.icon}: {recipe_str}')
-    print('Все пиццы доступны в размерах L, XL')
-    print('Чтобы сделать заказ, введите '
-          'python cli.py order pizza_name pizza_size [--delivery]')
 
 
 if __name__ == '__main__':
