@@ -4,7 +4,7 @@ from click.testing import CliRunner
 
 def test_menu():
     """
-    Тестируем, верное ли меню выдается
+    Тестируем, верное ли меню выдается.
     # смотрела про CliRunner на
     # https://stackoverflow.com/questions/45235045/how-do-i-use-clirunner-to-test-a-script
     """
@@ -16,7 +16,7 @@ def test_menu():
 
 
 def test_correct_order_1():
-    """Правильно ли обрабатываются корректные заказы"""
+    """Правильно ли обрабатывается корректный заказ"""
     arguments = ['order', 'margherita', 'L', '--delivery']
     result = CliRunner().invoke(cli, arguments)
     assert '👨‍🍳 Приготовили за' in result.output
@@ -24,6 +24,7 @@ def test_correct_order_1():
 
 
 def test_correct_order_2():
+    """Правильно ли обрабатывается корректный заказ"""
     arguments = ['order', 'PEPPERONI', 'XL']
     result = CliRunner().invoke(cli, arguments)
     assert '👨‍🍳 Приготовили за' in result.output
@@ -31,6 +32,7 @@ def test_correct_order_2():
 
 
 def test_correct_order_3():
+    """Правильно ли обрабатывается корректный заказ"""
     arguments = ['order', 'haWAiian', 'l']
     result = CliRunner().invoke(cli, arguments)
     assert '👨‍🍳 Приготовили за' in result.output
